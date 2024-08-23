@@ -41,6 +41,14 @@ header {
     border: 1px solid var(--gray-25);
     box-shadow: 0 2px 4px var(--shadow);
 
+    header span::after {
+        content: ' • ';
+    }
+
+    header span:last-child::after {
+        content: '';
+    }
+
     .header-bar {
         width: 100%;
         max-width: 1200px;
@@ -59,15 +67,7 @@ header {
         letter-spacing: 2px;
         text-align: right;
     }
-    
-    /* Adding small divider dots */
-    .retro-header span::after {
-        content: ' • ';
-    }
-    .retro-header span:last-child::after {
-        content: '';
-    }
-    
+        
     .header-bar::before,
     .header-bar::after {
         content: '';

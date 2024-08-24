@@ -11,14 +11,16 @@
     --yellow: #FFFF00;
     --teal-25: #008080;
     --teal-40: #00cccc;
-    --orange-70: hsl(12, 100%, 70%);
-    --orange-75: hsl(26, 98%, 75%);
+    --orange-70: #ff8566;
+    --orange-75: #feb781;
     --peach: #FFDAB9;
-    --black: hsl(0, 0%, 0%);
-    --gray-25: hsl(0, 0%, 25%);
-    --gray-35: hsl(0, 0%, 35%);
-    --gray-75: hsl(0, 0%, 75%);
-    --gray-85: hsl(0, 0%, 85%);
+    --black: #000000;
+    --white: #ffffff;
+    --gray-25: #404040;
+    --gray-35: #595959;
+    --gray-55: #8c8c8c;
+    --gray-75: #bfbfbf;
+    --gray-85: #d9d9d9;
     --shadow: rgba(0, 0, 0, 0.5);
 }
 
@@ -178,3 +180,81 @@ footer {
     z-index: -1;
     border-right: 5px double var(--gray-25);
 }
+
+.dialog-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    min-width: 350px;
+    border: 5px outset var(--gray-75);
+    background-color: var(--gray-75);
+    box-shadow: 5px 5px 10px var(--shadow);
+
+    .dialog-title-bar {
+        margin: 1px;
+        background: linear-gradient(to right, var(--teal-40), var(--purple-40));
+        color: var(--white);
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .dialog-title {
+            font-weight: bold;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 0 5px;
+            background-color: var(--gray-75);
+            border: 5px outset var(--gray-75);
+            color: var(--black);
+            outline: 1px solid var(--black);
+        }
+
+        button:hover {
+            background-color: var(--gray-55);
+        }
+    }
+
+    .dialog-content {
+        padding: 10px 25px;
+        text-align: center;
+        display: flex;
+        gap: 10px;
+
+
+        img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        p {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    }
+
+    .dialog-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    
+        button {
+            padding: 5px 10px;
+            border: 5px outset var(--gray-75);
+            outline: 1px solid var(--black);
+            background-color: var(--gray-75);
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: var(--gray-55);
+        }
+    }
+}
+ 

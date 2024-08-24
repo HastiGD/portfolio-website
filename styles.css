@@ -157,13 +157,13 @@ footer {
         }
 
         a {
-            color: white;
+            color: var(--gray-75);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #00aaff;
+            color: var(--orange-75);
         }
     }
 }
